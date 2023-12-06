@@ -52,7 +52,7 @@ public class MemberLookup_ITCase {
 	static final String path = Paths.get(System.getProperty("user.home"), "/member_look")
 			.toString();
 
-	static final String name = "cluster.conf";
+	static final String name = "conf/cluster.conf";
 
 	ServerMemberManager memberManager;
 
@@ -124,7 +124,7 @@ public class MemberLookup_ITCase {
 	public void test_c_lookup_address_server() throws Exception {
 		EnvUtil.setIsStandalone(false);
 		System.out.println(EnvUtil.getClusterConfFilePath());
-		DiskUtils.deleteFile(Paths.get(path, "conf").toString(), "cluster.conf");
+		DiskUtils.deleteFile(Paths.get(path, "conf").toString(), "conf/cluster.conf");
 		System.out.println(new File(EnvUtil.getClusterConfFilePath()).exists());
 		try {
 			LookupFactory.createLookUp(memberManager);

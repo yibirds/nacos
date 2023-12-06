@@ -33,5 +33,7 @@ public class AuthPageConstant {
     public static final String LIMIT = "LIMIT";
     
     public static final String LIMIT_SIZE = "LIMIT ?,?";
+
+    public static final String POSTGRESQL_LIMIT_SIZE = "OFFSET ? LIMIT ?";
     
 }
