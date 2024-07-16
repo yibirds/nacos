@@ -35,6 +35,26 @@
 
     <dependencies>
         <dependency>
+            <artifactId>spring-security-core</artifactId>
+            <groupId>org.springframework.security</groupId>
+            <version>5.7.12</version>
+        </dependency>
+        <dependency>
+            <artifactId>spring-security-web</artifactId>
+            <groupId>org.springframework.security</groupId>
+            <version>5.7.12</version>
+        </dependency>
+        <dependency>
+            <artifactId>spring-security-config</artifactId>
+            <groupId>org.springframework.security</groupId>
+            <version>5.7.12</version>
+        </dependency>
+        <dependency>
+            <artifactId>spring-security-crypto</artifactId>
+            <groupId>org.springframework.security</groupId>
+            <version>5.7.12</version>
+        </dependency>
+        <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>nacos-common</artifactId>
         </dependency>
@@ -73,6 +93,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>spring-security-core</artifactId>
+                    <groupId>org.springframework.security</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>
@@ -95,6 +121,12 @@
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-test</artifactId>
             <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <artifactId>spring-security-core</artifactId>
+                    <groupId>org.springframework.security</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>
